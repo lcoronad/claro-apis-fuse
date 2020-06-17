@@ -1,0 +1,292 @@
+{
+    "RetrieveProductResponse": {
+        "resultCode": {
+            "resultCode": 0,
+            "resultDescription": "success"
+        },
+        "productList": {
+            "products": [
+                {
+                    "id": 50083,
+                    "enabled": true,
+                    "name": "7 Dias con Minutos Ilimitados 250MB",
+                    "description": "Este paquete incluye los servicios ilimitados de Minutos y SMS todo destino, Chat WA, TW y FB, ademas tiene 250MB.Por 7 dias. Valor $ 7000",
+                    "productType": "common",
+                    "createDate": 1574977077000,
+                    "expireDate": 7289568000000,
+                    "activationDate": 1574899200000,
+                    "externalId": "UNDEF",
+                    "group": "PG.Promociones.Rappi.Bundle",
+                    "activationOnFirstUsage": false,
+                    "recurrentFlag": false,
+                    "maxRecurrent": 0,
+                    "useBillingCycle": false,
+                    "extendedAttributes": [
+                        {
+                            "name": "offerID",
+                            "value": "31567",
+                            "type": "java.lang.Integer"
+                        },
+                        {
+                            "name": "serviceUsage1",
+                            "value": "262144000",
+                            "type": "java.lang.Long"
+                        },
+                        {
+                            "name": "zona",
+                            "value": "-99",
+                            "type": "java.lang.String"
+                        },
+                        {
+                            "name": "tipoPaquete",
+                            "value": "M",
+                            "type": "java.lang.String"
+                        },
+                        {
+                            "name": "isNested",
+                            "value": "1",
+                            "type": "java.lang.String"
+                        },
+                        {
+                            "name": "type",
+                            "value": "DATOS",
+                            "type": "java.lang.String"
+                        }
+                    ],
+                    "subscriptionEffectiveDuration": {
+                        "unit": "hour",
+                        "duration": "168"
+                    },
+                    "simpleActivationPrice": {
+                        "price": "0",
+                        "currencyCode": "0"
+                    },
+                    "simpleProductPrice": {
+                        "price": "7000",
+                        "currencyCode": "COP"
+                    },
+                    "params": [
+                        {
+                            "searchable": false,
+                            "name": "1234567890",
+                            "type": "1234567890",
+                            "refName": "1234567890",
+                            "defaultExpression": "1234567890",
+                            "mandatory": false
+                        }
+                    ]
+                },
+                {
+                    "id": 50085,
+                    "enabled": true,
+                    "name": "10000 7Dias Minutos ilimitados 1GB",
+                    "description": "Este paquete incluye los servicios ilimitados de Minutos y SMS todo destino, ademas tiene 1GB.Por 7 dias. Valor $ 10000",
+                    "productType": "common",
+                    "createDate": 1574977077000,
+                    "expireDate": 7289568000000,
+                    "activationDate": 1574899200000,
+                    "externalId": "UNDEF",
+                    "group": "PG.Promociones.Rappi.Bundle",
+                    "activationOnFirstUsage": false,
+                    "recurrentFlag": false,
+                    "maxRecurrent": 0,
+                    "useBillingCycle": false,
+                    "extendedAttributes": [
+                        {
+                            "name": "offerID",
+                            "value": "31569",
+                            "type": "java.lang.Integer"
+                        },
+                        {
+                            "name": "serviceUsage1",
+                            "value": "1073741824",
+                            "type": "java.lang.Long"
+                        },
+                        {
+                            "name": "zona",
+                            "value": "-99",
+                            "type": "java.lang.String"
+                        },
+                        {
+                            "name": "tipoPaquete",
+                            "value": "V",
+                            "type": "java.lang.String"
+                        },
+                        {
+                            "name": "isNested",
+                            "value": "1",
+                            "type": "java.lang.String"
+                        },
+                        {
+                            "name": "type",
+                            "value": "DATOS",
+                            "type": "java.lang.String"
+                        }
+                    ],
+                    "subscriptionEffectiveDuration": {
+                        "unit": "hour",
+                        "duration": "168"
+                    },
+                    "simpleActivationPrice": {
+                        "price": "0",
+                        "currencyCode": "0"
+                    },
+                    "simpleProductPrice": {
+                        "price": "10000",
+                        "currencyCode": "COP"
+                    },
+                    "params": [
+                        {
+                            "searchable": false,
+                            "name": "1234567890",
+                            "type": "1234567890",
+                            "refName": "1234567890",
+                            "defaultExpression": "1234567890",
+                            "mandatory": false
+                        }
+                    ]
+                },
+                {
+                    "id": 50084,
+                    "enabled": true,
+                    "name": "10 Dias con Minutos Ilimitados 400MB",
+                    "description": "Este paquete incluye los servicios ilimitados de Minutos y SMS todo destino, Chat WA, TW y FB, ademas tiene 400MB.Por 10 dias. Valor $ 10000",
+                    "productType": "common",
+                    "createDate": 1574977077000,
+                    "expireDate": 7289568000000,
+                    "activationDate": 1574899200000,
+                    "externalId": "UNDEF",
+                    "group": "PG.Promociones.Rappi.Bundle",
+                    "activationOnFirstUsage": false,
+                    "recurrentFlag": false,
+                    "maxRecurrent": 0,
+                    "useBillingCycle": false,
+                    "extendedAttributes": [
+                        {
+                            "name": "offerID",
+                            "value": "31568",
+                            "type": "java.lang.Integer"
+                        },
+                        {
+                            "name": "serviceUsage1",
+                            "value": "419430400",
+                            "type": "java.lang.Long"
+                        },
+                        {
+                            "name": "zona",
+                            "value": "-99",
+                            "type": "java.lang.String"
+                        },
+                        {
+                            "name": "tipoPaquete",
+                            "value": "M",
+                            "type": "java.lang.String"
+                        },
+                        {
+                            "name": "isNested",
+                            "value": "1",
+                            "type": "java.lang.String"
+                        },
+                        {
+                            "name": "type",
+                            "value": "DATOS",
+                            "type": "java.lang.String"
+                        }
+                    ],
+                    "subscriptionEffectiveDuration": {
+                        "unit": "hour",
+                        "duration": "240"
+                    },
+                    "simpleActivationPrice": {
+                        "price": "0",
+                        "currencyCode": "0"
+                    },
+                    "simpleProductPrice": {
+                        "price": "10000",
+                        "currencyCode": "COP"
+                    },
+                    "params": [
+                        {
+                            "searchable": false,
+                            "name": "1234567890",
+                            "type": "1234567890",
+                            "refName": "1234567890",
+                            "defaultExpression": "1234567890",
+                            "mandatory": false
+                        }
+                    ]
+                },
+                {
+                    "id": 50086,
+                    "enabled": true,
+                    "name": "20000 15Dias Minutos ilimitados 2GB",
+                    "description": "Este paquete incluye los servicios ilimitados de Minutos y SMS todo destino, ademas tiene 2GB.Por 15 dias. Valor $ 20000",
+                    "productType": "common",
+                    "createDate": 1574977077000,
+                    "expireDate": 7289568000000,
+                    "activationDate": 1574899200000,
+                    "externalId": "UNDEF",
+                    "group": "PG.Promociones.Rappi.Bundle",
+                    "activationOnFirstUsage": false,
+                    "recurrentFlag": false,
+                    "maxRecurrent": 0,
+                    "useBillingCycle": false,
+                    "extendedAttributes": [
+                        {
+                            "name": "offerID",
+                            "value": "31570",
+                            "type": "java.lang.Integer"
+                        },
+                        {
+                            "name": "serviceUsage1",
+                            "value": "2147483648",
+                            "type": "java.lang.Long"
+                        },
+                        {
+                            "name": "zona",
+                            "value": "-99",
+                            "type": "java.lang.String"
+                        },
+                        {
+                            "name": "tipoPaquete",
+                            "value": "V",
+                            "type": "java.lang.String"
+                        },
+                        {
+                            "name": "isNested",
+                            "value": "1",
+                            "type": "java.lang.String"
+                        },
+                        {
+                            "name": "type",
+                            "value": "DATOS",
+                            "type": "java.lang.String"
+                        }
+                    ],
+                    "subscriptionEffectiveDuration": {
+                        "unit": "hour",
+                        "duration": "360"
+                    },
+                    "simpleActivationPrice": {
+                        "price": "0",
+                        "currencyCode": "0"
+                    },
+                    "simpleProductPrice": {
+                        "price": "20000",
+                        "currencyCode": "COP"
+                    },
+                    "params": [
+                        {
+                            "searchable": false,
+                            "name": "1234567890",
+                            "type": "1234567890",
+                            "refName": "1234567890",
+                            "defaultExpression": "1234567890",
+                            "mandatory": false
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

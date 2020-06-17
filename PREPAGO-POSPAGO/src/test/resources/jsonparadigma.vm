@@ -1,0 +1,4 @@
+{
+    "data": "$!exchange.properties.cuenta",
+    "origin": "$!exchange.properties.origin"
+}

@@ -1,0 +1,19 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ban="BankPaymentManagement" xmlns:ban1="http://schemas.datacontract.org/2004/07/BankPaymentManagement">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <ban:BankPaymentReferenceRequest>
+            <!--Optional:-->
+            <ban:Bankpaymentautentication>
+                <ban1:password>$!exchange.properties.password</ban1:password>
+                <ban1:username>$!exchange.properties.username</ban1:username>
+            </ban:Bankpaymentautentication>
+            <!--Optional:-->
+            <ban:BankPaymentReference>
+                <ban1:bankCode>$!exchange.properties.bankcode</ban1:bankCode>
+                <ban1:companyID>$!exchange.properties.companyid</ban1:companyID>
+                <ban1:paymentReference>$!exchange.properties.referenceId</ban1:paymentReference>
+                <ban1:receptionDate>$!exchange.properties.fechaT</ban1:receptionDate>
+            </ban:BankPaymentReference>
+        </ban:BankPaymentReferenceRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

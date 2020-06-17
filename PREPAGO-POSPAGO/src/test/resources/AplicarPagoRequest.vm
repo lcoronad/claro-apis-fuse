@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ban="BankPaymentManagement" xmlns:ban1="http://schemas.datacontract.org/2004/07/BankPaymentManagement">
+   <soapenv:Header />
+   <soapenv:Body>
+      <ban:BankPaymentRegisterRequest>
+         <!--Optional:-->
+         <ban:BankPaymentAutentication>
+            <ban1:password>$!exchange.properties.APPassword</ban1:password>
+            <ban1:username>$!exchange.properties.APUsername</ban1:username>
+         </ban:BankPaymentAutentication>
+         <!--Optional:-->
+         <ban:BankpaymentRegister>
+            <ban1:bankCode>$!exchange.properties.APBankCode</ban1:bankCode>
+            <ban1:bankPaymentID>$!exchange.properties.APBankPaymentID</ban1:bankPaymentID>
+            <ban1:barCode />
+            <ban1:companyID>$!exchange.properties.APCompanyID</ban1:companyID>
+            <ban1:invoice />
+            <ban1:paymentAccountingDate>$!exchange.properties.APPaymentAccountingDate</ban1:paymentAccountingDate>
+            <ban1:paymentAmount>$!exchange.properties.APPaymentAmount</ban1:paymentAmount>
+            <ban1:paymentMethod>$!exchange.properties.APPaymentMethod</ban1:paymentMethod>
+            <ban1:paymentReceptionDate>$!exchange.properties.APPaymentReceptionDate</ban1:paymentReceptionDate>
+            <ban1:paymentReference>$!exchange.properties.APPaymentReference</ban1:paymentReference>
+         </ban:BankpaymentRegister>
+      </ban:BankPaymentRegisterRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

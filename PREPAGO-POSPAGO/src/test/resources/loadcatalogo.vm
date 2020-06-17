@@ -1,0 +1,17 @@
+{
+    "RetrieveProductRequest": {
+        "authentication": {
+            "user": "$!exchange.properties.usuario",
+            "password": "$!exchange.properties.password",
+            "sourceApplicationId": "$!exchange.properties.applicationid",
+            "transactionId": "$!exchange.properties.transaccionid"
+        },
+        "findBy": "$!exchange.properties.grupo",
+        "parameter": [
+            {
+                "name": "$!exchange.properties.name",
+                "value": "$!exchange.properties.valor"
+            }
+        ]
+    }
+}

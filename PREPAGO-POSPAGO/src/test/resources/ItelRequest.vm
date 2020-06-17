@@ -1,0 +1,10 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ejec="http://www.comcel.com.co/EjecutarTrama/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <ejec:Input_Parameters>
+            <TRAMA>API_MNG!Ap1manag*!414!$!exchange.properties.min!PaquetesTAT;4015;1233444;$!exchange.properties.offerId;1;814!*</TRAMA>
+            <!--Optional:-->
+            <IP_ORIGEN>string</IP_ORIGEN>
+        </ejec:Input_Parameters>
+    </soapenv:Body>
+</soapenv:Envelope>

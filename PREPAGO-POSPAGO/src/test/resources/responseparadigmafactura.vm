@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+    <soapenv:Header xmlns:ban1="http://schemas.datacontract.org/2004/07/BankPaymentManagement" xmlns:ban="BankPaymentManagement"/>
+    <S:Body xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+        <ns0:Fault xmlns:ns1="http://www.w3.org/2003/05/soap-envelope" xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/">
+            <faultcode>ERROR</faultcode>
+            <faultstring/>
+            <detail>
+                <ns1:GetReferenceInformationFault xmlns:ns1="http://www.americamovil.com/service/namespace/BankPaymentService/v1">
+                    <errorCode>OSB-382505</errorCode>
+                    <stackTrace> OSB Validate action failed validation </stackTrace>
+                    <operation>GetReferenceInformation</operation>
+                    <errorMessage/>
+                </ns1:GetReferenceInformationFault>
+            </detail>
+        </ns0:Fault>
+    </S:Body>
+</soapenv:Envelope>
