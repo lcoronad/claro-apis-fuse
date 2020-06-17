@@ -1,0 +1,78 @@
+spec:
+  template:
+    spec:
+      containers:
+        - env:
+            - name: SPRING_APPLICATION_JSON
+              value: '{"server":{"undertow":{"io-threads":10, "worker-threads":20 }}}'
+            - name: JAVA_OPTIONS
+              value: '-Xms1024m -Xmx1024m -Dfile.encoding=ISO-8859-1'
+            - name: bscs.username
+              valueFrom:
+                secretKeyRef:
+                  key: bscs.user
+                  name: api-generic-credentials-secret
+            - name: bscs.password
+              valueFrom:
+                secretKeyRef:
+                  key: bscs.passwd
+                  name: api-generic-credentials-secret
+            - name: proxy.user
+              valueFrom:
+                secretKeyRef:
+                  key: sso.proxy.user
+                  name: api-generic-credentials-secret
+            - name: proxy.password
+              valueFrom:
+                secretKeyRef:
+                  key: sso.proxy.password
+                  name: api-generic-credentials-secret
+            - name: logs.username
+              valueFrom:
+                secretKeyRef:
+                  key: apitrans.connection.username
+                  name: api-generic-credentials-secret
+            - name: logs.password
+              valueFrom:
+                secretKeyRef:
+                  key: apitrans.connection.password
+                  name: api-generic-credentials-secret
+            - name: logs.url.connection
+              valueFrom:
+                configMapKeyRef:
+                  key: claro.connection.url
+                  name: apitransbd-configmap
+          envFrom:
+            - configMapRef:
+                name: broker-audit-configmap
+            - configMapRef:
+                name: api-servicios-claro-prepago-pospago-configmap
+            - secretRef:
+                name: api-generic-credentials-secret
+          readinessProbe:
+            httpGet:
+              path: /healthcheck
+              port: 8080
+              scheme: HTTP
+            failureThreshold: 3
+            initialDelaySeconds: 20
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 120
+          livenessProbe:
+            httpGet:
+              path: /healthcheck
+              port: 8080
+              scheme: HTTP
+            failureThreshold: 2
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 120
+          resources:
+            limits:
+              cpu: 1
+              memory: 1Gi
+            requests:
+              cpu: 1
+              memory: 1Gi
