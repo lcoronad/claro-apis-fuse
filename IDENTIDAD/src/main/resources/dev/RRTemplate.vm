@@ -1,0 +1,14 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tcs="http://tcsdgtr1b.wsbeans.iseries/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tcs:tcsdgtr1b>
+         <arg0>
+            <MENSAJEERR>?</MENSAJEERR>
+            <!--1 or more repetitions:-->
+            <RESPUESTA>?</RESPUESTA>
+            <TIPO_CONSULTA>${headers.tipoConsulta}</TIPO_CONSULTA>
+            <VALOR_CONSULTA>${headers.valorConsulta}</VALOR_CONSULTA>
+         </arg0>
+      </tcs:tcsdgtr1b>
+   </soapenv:Body>
+</soapenv:Envelope>

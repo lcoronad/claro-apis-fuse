@@ -1,0 +1,23 @@
+spec:
+  template:
+    spec:
+      containers:
+        - env:
+            - name: SPRING_APPLICATION_JSON
+              value: '{"server":{"undertow":{"io-threads":10, "worker-threads":20 }}}'
+            - name: JAVA_OPTIONS
+              value: '-Xms1024m -Xmx1024m -Dfile.encoding=ISO-8859-1'
+          envFrom:
+            - configMapRef:
+                name: broker-audit-configmap
+            - configMapRef:
+                name: api-autenticacion-configmap
+            - secretRef:
+                name: api-generic-credentials-secret
+          resources:
+            limits:
+              cpu: 2
+              memory: 1Gi
+            requests:
+              cpu: 2
+              memory: 1Gi
