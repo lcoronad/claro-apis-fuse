@@ -1,0 +1,119 @@
+apiVersion: v1
+data:
+  api.description: Appi Servicios Claro Prepago Pospago
+  api.description.service.itel: Aprovisionar Paquete - ITEL
+  api.description.service.itel.catalogo: Consulta de Itel Catálogo
+  api.description.service.motorpagos: Aplicar Pago de Facura en Motor de Pagos
+  api.description.service.paradigma: Consulta de Facturación a Paradigma
+  api.log.name: SYSTEM
+  api.name: Appi-Prepago-Pospago
+  api.tipo.producto.pospago: POSPAGO
+  api.tipo.producto.prepago: PREPAGO
+  api.title: Appi Pospago-Prepago
+  api.version: '@project.version@'
+  bscs.catalogo.isprepago: >-
+    SELECT sysadm.FUNC_CAP_CO_ID(sysadm.getCoId(:#min),'CLI',null) AS x FROM
+    dual
+  bscs.dbcp2.initial-size: '10'
+  bscs.dbcp2.login-timeout: '2000'
+  bscs.dbcp2.max-idle: '50'
+  bscs.dbcp2.max-total: '50'
+  bscs.dbcp2.max-wait-millis: '2000'
+  bscs.dbcp2.min-idle: '10'
+  bscs.dbcp2.remove-abandoned-on-borrow: 'true'
+  bscs.dbcp2.remove-abandoned-timeout: '60'
+  bscs.dbcp2.validation-query: select 1 from dual
+  bscs.dbcp2.validation-query-timeout: '10'
+  bscs.driver-class-name: oracle.jdbc.driver.OracleDriver
+  bscs.url: 'jdbc:oracle:thin:@172.22.89.132:1817/BSCSPROD'
+  bscs.validate.isactivo: >-
+    sysadm.prc_info_idcliente(NVARCHAR :#min, OUT NVARCHAR S_vpassportno, OUT
+    NVARCHAR S_vidtype_name, OUT NVARCHAR S_vcs_stat_chng, OUT INTEGER
+    S_vcod_respuesta, OUT NVARCHAR S_vdesc_respuesta)
+  cache.cron: 0 0 7 1/1 * ? *
+  camel.component.servlet.mapping.context-path: /*
+  camel.springboot.name: CamelCxfRest
+  canal.aplicar.cargo.dos: QR APP Rappi
+  canal.aplicar.cargo.tres: Rappitenderos
+  canal.aplicar.cargo.uno: Botón Claro Rappi
+  canal.catalogo: 'Botón Claro Rappi,QR APP Rappi,Rappitenderos'
+  canal.dos: QR APP Rappi
+  canal.tres: Rappitenderos
+  canal.uno: Botón Claro Rappi
+  canales: '1,2,3,4'
+  endpoint.api.adquirir.paquete: aprovision/paquete/prepago/aprovisionar/v1
+  endpoint.api.consultar.factura: pagofactura/movil/pospago/factura/v1
+  endpoint.api.consuta.catalogo: aprovision/paquete/prepago/catalogo/v1
+  endpoint.api.get: /healthcheck
+  endpoint.api.get.description: 3scale
+  endpoint.api.pagar.factura: pagofactura/movil/pospago/aplicarpago/v1
+  endpoints.enabled: 'true'
+  endpoints.info.sensitive: 'false'
+  info.app.description: Servicios Claro Prepago Pospago
+  info.app.name: appi-pospago-prepago
+  info.app.version: '@project.version@'
+  itel.aplicar.cargo.companyid: '1'
+  itel.aplicar.cargo.nombre: APLICAR CARGO
+  itel.aplicar.cargo.url: >-
+    http://172.24.42.50:8102/RegisterPayment_Project/Services/Proxy_Pipelines/BankPaymentManagement_PS
+  itel.aprovisionamiento.nombre: ITEL
+  itel.aprovisionamiento.url: 'http://172.22.85.253:8013/ITEL/Core/Proxies/ejecutarTramaEspecifica_PS'
+  itel.catalogo.applicationid: API_MNG
+  itel.catalogo.busqueda: GROUP
+  itel.catalogo.busqueda.name: group
+  itel.catalogo.busqueda.valor: PG.Promociones.Rappi.Bundle
+  itel.catalogo.transaccionid: '1'
+  itel.catalogo.url: 'http://172.22.85.253:8013/ITEL/Core/Proxies/ODMJson_PS/products/retrieve'
+  itel.vm.codigo.cobro: '1'
+  itel.vm.ip.origen: string
+  itel.vm.method: '414'
+  itel.vm.package: PaquetesTAT
+  itel.vm.param.dos: '1233444'
+  itel.vm.param.tres: '814'
+  itel.vm.param.uno: '4015'
+  logging.level.com.claro: INFO
+  management.address: 0.0.0.0
+  management.port: '8081'
+  management.security.enabled: 'false'
+  message.codigo.failed: FAILED
+  message.codigo.ok: OK
+  message.detalle.aplicar.cargo.failed: Error al hacer el pago
+  message.detalle.aplicar.cargo.ok: Proceso exitoso
+  message.detalle.aprovisionamiento.failed: Error al hacer el aprovisionamiento
+  message.detalle.aprovisionamiento.ok: Proceso exitoso
+  message.detalle.catalogo.failed: Error al cargar el catálogo
+  message.detalle.catalogo.failed.isprepago: Transacción no permitida
+  message.detalle.catalogo.ok: Proceso exitoso
+  message.detalle.cf.failed: Error en la consulta
+  message.detalle.failed: Error
+  message.detalle.ok: Proceso exitoso
+  message.error.validator: Error en validación de campos.
+  mp.getfactura.companyid: '1'
+  mp.getfactura.url: >-
+    http://172.24.160.139:8080/RegisterPayment_Project/Services/Proxy_Pipelines/BankPaymentManagement_PS
+  paradigma.key: AA47455B133A53CC
+  paradigma.origin: APIManagement
+  paradigma.url: >-
+    http://facturasclarocert.paradigma.com.co/ebpTelmexMain/Pages/Services/ServiceAppClaro.aspx/getLastBillInfo
+  payment.method.one: Efectivo
+  payment.method.three: Tarjeta
+  payment.method.two: Cheque
+  proxy.domain: claroco
+  proxy.port: '8080'
+  proxy.url: proxy.claro.co
+  server.address: 0.0.0.0
+  server.port: '8080'
+  spring.application.name: appi-pospago-prepago
+  spring.mvc.static-path-pattern: /resources/**
+  spring.resources.add-mappings: 'true'
+  spring.resources.chain.enabled: 'true'
+  spring.resources.chain.gzipped: 'true'
+kind: ConfigMap
+metadata:
+  creationTimestamp: '2019-12-26T20:21:39Z'
+  name: api-servicios-claro-prepago-pospago-configmap
+  namespace: backends-api-prod
+  resourceVersion: '30884016'
+  selfLink: >-
+    /api/v1/namespaces/backends-api-prod/configmaps/api-servicios-claro-prepago-pospago-configmap
+  uid: 52ce5ebd-281d-11ea-8ea7-fa163e10f0ab
